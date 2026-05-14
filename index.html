@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NootLab | Mechatronics Portfolio</title>
+  <style>
+    /* === Reset & Base === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0d0d;
+      --surface: #1a1a1a;
+      --accent: #00e5ff;
+      --text: #e0e0e0;
+      --muted: #888;
+      --radius: 10px;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; line-height: 1.6; }
+
+    /* === Nav === */
+    nav { display: flex; justify-content: space-between; align-items: center;
+          padding: 1.2rem 2rem; border-bottom: 1px solid #222; position: sticky; top: 0;
+          background: var(--bg); z-index: 10; }
+    nav .logo { font-size: 1.3rem; font-weight: 700; color: var(--accent); letter-spacing: 2px; }
+    nav a { color: var(--muted); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; transition: color .2s; }
+    nav a:hover { color: var(--accent); }
+
+    /* === Hero === */
+    .hero { text-align: center; padding: 5rem 2rem 3rem; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { color: var(--muted); max-width: 520px; margin: 1rem auto; font-size: 1.05rem; }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
+    .btn { padding: .75rem 1.75rem; border-radius: var(--radius); font-size: .95rem;
+           text-decoration: none; font-weight: 600; transition: all .2s; }
+    .btn-primary { background: var(--accent); color: #000; }
+    .btn-primary:hover { opacity: .85; }
+    .btn-outline { border: 2px solid var(--accent); color: var(--accent); }
+    .btn-outline:hover { background: var(--accent); color: #000; }
+
+    /* === Projects === */
+    .section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem;
+                     border-left: 4px solid var(--accent); padding-left: .75rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--surface); border-radius: var(--radius); overflow: hidden;
+            border: 1px solid #2a2a2a; transition: transform .2s, border-color .2s; }
+    .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .card img { width: 100%; height: 180px; object-fit: cover; background: #222; }
+    .card-body { padding: 1.1rem; }
+    .card-body h3 { font-size: 1rem; margin-bottom: .4rem; }
+    .card-body p { color: var(--muted); font-size: .88rem; }
+    .card-tags { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .75rem; }
+    .tag { background: #222; color: var(--accent); font-size: .75rem;
+           padding: .2rem .6rem; border-radius: 20px; border: 1px solid #333; }
+    .card-link { display: inline-block; margin-top: .8rem; font-size: .85rem;
+                 color: var(--accent); text-decoration: none; }
+    .card-link:hover { text-decoration: underline; }
+
+    /* === About === */
+    .about { background: var(--surface); border-radius: var(--radius); padding: 2.5rem;
+             border: 1px solid #2a2a2a; max-width: 700px; margin: 0 auto; text-align: center; }
+    .about p { color: var(--muted); margin-top: .75rem; }
+
+    /* === Footer === */
+    footer { text-align: center; padding: 2.5rem; color: var(--muted); font-size: .85rem;
+             border-top: 1px solid #1e1e1e; margin-top: 4rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="logo">NOOTLAB</span>
+    <div>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/NootLabI" target="_blank">GitHub</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Mechatronics <span>Portfolio</span></h1>
+    <p>Robotics, embedded systems, and engineering projects by NootLab — building things that move, sense, and think.</p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="https://github.com/NootLabI" target="_blank" class="btn btn-outline">GitHub →</a>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <div class="section" id="projects">
+    <div class="section-title">Ongoing Works</div>
+    <div class="grid">
+
+      <!-- Card 1 — replace src, title, description, tags, and href -->
+      <div class="card">
+        <img src="https://placehold.co/600x360/1a1a1a/00e5ff?text=Project+1" alt="Project 1" />
+        <div class="card-body">
+          <h3>Project Title One</h3>
+          <p>Short description of what this project does and the problem it solves.</p>
+          <div class="card-tags">
+            <span class="tag">Arduino</span>
+            <span class="tag">ROS</span>
+            <span class="tag">CAD</span>
+          </div>
+          <a href="https://github.com/NootLabI" class="card-link">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://placehold.co/600x360/1a1a1a/00e5ff?text=Project+2" alt="Project 2" />
+        <div class="card-body">
+          <h3>Project Title Two</h3>
+          <p>Short description of what this project does and the problem it solves.</p>
+          <div class="card-tags">
+            <span class="tag">STM32</span>
+            <span class="tag">Python</span>
+            <span class="tag">PCB</span>
+          </div>
+          <a href="https://github.com/NootLabI" class="card-link">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://placehold.co/600x360/1a1a1a/00e5ff?text=Project+3" alt="Project 3" />
+        <div class="card-body">
+          <h3>Project Title Three</h3>
+          <p>Short description of what this project does and the problem it solves.</p>
+          <div class="card-tags">
+            <span class="tag">Raspberry Pi</span>
+            <span class="tag">OpenCV</span>
+          </div>
+          <a href="https://github.com/NootLabI" class="card-link">View on GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="section" id="about">
+    <div class="section-title">About</div>
+    <div class="about">
+      <h2>NootLab</h2>
+      <p>Mechatronics engineer with a passion for robotics, embedded systems, and building things that bridge the physical and digital worlds. Based in the UK.</p>
+      <div class="hero-buttons" style="margin-top:1.5rem;">
+        <a href="https://github.com/NootLabI" target="_blank" class="btn btn-primary">GitHub</a>
+        <a href="mailto:hello@nootlab.co.uk" class="btn btn-outline">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 <a href="https://nootlab.co.uk">nootlab.co.uk</a> — Built with GitHub Pages</p>
+  </footer>
+
+</body>
+</html>
